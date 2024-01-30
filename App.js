@@ -1,24 +1,13 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-import Constants from 'expo-constants';
-
-
-// Você pode importar de arquivos locais
+import React, { Component } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View>
-        <AppContainer/>
+export default class App extends Component{
+  render(){
+    return(
+      <View style={{flex:1}}>
+        <HomeScreen />
       </View>
-    );
+    )
   }
 }
-
-var AppNavigator = createSwitchNavigator({
-  HomeScreen: HomeScreen
-});
-
-const AppContainer = createAppContainer(AppNavigator);
